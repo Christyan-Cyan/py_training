@@ -1,7 +1,6 @@
 kondisi = True
 basic = ["ipan suki", "maman", "hizbool", 'cyan']
 
-inp = input("siapa yg ingin di eksekusi? ")
 
 def fungsi(inp) :
 
@@ -13,6 +12,7 @@ def fungsi(inp) :
         print("ok sip")
 
 while kondisi :
+    inp = input("siapa yg ingin di eksekusi? ")
     if inp == "end":
         kondisi = False
     else:
