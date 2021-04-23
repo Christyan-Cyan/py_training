@@ -8,6 +8,6 @@ s = "string" #This is string
 print(s)
 
 n = 5 #This is number
-print(n)
+print(n * 8)
 
 # NB : Variable must be declared first and then printed !
