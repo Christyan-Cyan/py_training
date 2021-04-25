@@ -1,4 +1,4 @@
-data = []
+data = list()
 
 while True :
     tanya = input("Apakah Anda Ingin Menambah Data ? ")
