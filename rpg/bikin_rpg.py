@@ -4,6 +4,14 @@ my_health = 100
 enemy_health = 100
 print("Battle Was Begin !")
 
+
+def battleEnds():
+    print("\nBattle Ends")
+    print("Your Health :", my_health)
+    print("Enemy Health :", enemy_health, "\n")
+    exit()
+
+
 while my_health > 0 or enemy_health > 0:
     my_damage = random.randint(0, 30)
     enemy_damage = random.randint(0, 30)
@@ -23,19 +31,14 @@ while my_health > 0 or enemy_health > 0:
         print("My Health :", my_health, "\nEnemy Health :", enemy_health)
         if my_health <= 0:
             print("\nDefeat !")
-            print("\nBattle Ends")
-            print("Your Health :", my_health)
-            print("Enemy Health :", enemy_health, "\n")
-            break
+            battleEnds()
         elif enemy_health <= 0:
             print("\nVictory !")
-            print("\nBattle Ends")
-            print("Your Health :", my_health)
-            print("Enemy Health :", enemy_health, "\n")
-            break
+            battleEnds()
+        elif my_health <= 0 and enemy_health <= 0:
+            print("Draw !")
+            battleEnds()
     elif input_data == "no":
-        print("No Damage\nYour Health :", my_health)
-        print("Enemy Health :", enemy_health, "\n")
-        break
+        battleEnds()
     else:
         print("???")
